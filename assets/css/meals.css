@@ -1,0 +1,13 @@
+h1 {
+	text-align: center;
+}
+
+h5 {
+	text-align: center;
+}
+
+.button {
+	margin: auto;
+    width: 50%;
+	padding: 10px;
+}
