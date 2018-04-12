@@ -1,4 +1,3 @@
-var mealOptions = ["Chicken", "Steak", "Burgers"];
 
 // var randomMealSunday = meals[Math.floor(Math.random() * meals.length)];
 // var randomMealMonday = meals[Math.floor(Math.random() * meals.length)];
@@ -11,14 +10,16 @@ var mealOptions = ["Chicken", "Steak", "Burgers"];
 // console.log(randomMealWednesday);
 
 function generateMeals() {
+	var mealOptions = ["Chicken", "Steak", "Burgers", "Shepherd's Pie", "Pot Roast", "Stuffed Chicken", "Chicken Parm", "Chicken Marsala", "Tacos"];
 	selectedMeals = [];
-	for (i = 0; i < 4; i++) {
+	for (i = 0; i < 6; i++) {
 		var rand = Math.floor(Math.random() * mealOptions.length);
 	    var num = mealOptions[rand];
 	    mealOptions.splice(rand,1);
 	    selectedMeals[i] = num;
 	    console.log(num);
 	    console.log(selectedMeals);
+	    document.getElementById("meal" + [i]).innerHTML = num;
 	}
 }
 
