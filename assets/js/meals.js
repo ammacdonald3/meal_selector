@@ -1,34 +1,18 @@
-
-// var randomMealSunday = meals[Math.floor(Math.random() * meals.length)];
-// var randomMealMonday = meals[Math.floor(Math.random() * meals.length)];
-// var randomMealTuesday = meals[Math.floor(Math.random() * meals.length)];
-// var randomMealWednesday = meals[Math.floor(Math.random() * meals.length)];
-
-// console.log(randomMealSunday);
-// console.log(randomMealMonday);
-// console.log(randomMealTuesday);
-// console.log(randomMealWednesday);
-
 function generateMeals() {
+	// Create array of meal option
 	var mealOptions = ["Chicken", "Steak", "Burgers", "Shepherd's Pie", "Pot Roast", "Stuffed Chicken", "Chicken Parm", "Chicken Marsala", "Tacos"];
-	selectedMeals = [];
+	// Create blank array for selected meals
+	//selectedMeals = [];
 	for (i = 0; i < 6; i++) {
-		var rand = Math.floor(Math.random() * mealOptions.length);
-	    var num = mealOptions[rand];
-	    mealOptions.splice(rand,1);
-	    selectedMeals[i] = num;
-	    console.log(num);
-	    console.log(selectedMeals);
-	    document.getElementById("meal" + [i]).innerHTML = num;
+		// Randomly select a meal from array
+		var randomMeal = Math.floor(Math.random() * mealOptions.length);
+		// Assign selected meal to variable
+	    var selectedMeal = mealOptions[randomMeal];
+	    // Remove selected meal from array of meal options
+	    mealOptions.splice(randomMeal,1);
+	    // Append selected meal to selected meals array
+	    //selectedMeals[i] = selectedMeal;
+	    // Print selected meal to HTML table
+	    document.getElementById("meal" + [i]).innerHTML = selectedMeal;
 	}
 }
-
-// document.getElementById("#generate").onclick = generateMeals();
-
-// $("button").on("click", function() {
-// 	$(this).generateMeals();
-// })
-
-// document.getElementById("button").on("click", function() {
-// 	$(this).generateMeals();
-// })
